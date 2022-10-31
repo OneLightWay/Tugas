@@ -1,0 +1,92 @@
+/*
+    Nama    : Ray Fadly Hadi
+    NIM     : 22343029
+    Kelas   : 1INF2
+*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "\t\t\t<< \tTABEL BIAYA OPERASI \t>>\n";
+    cout << "\t=========================================================================" << endl;
+    cout << "\t| Nama Operasi \t\t| Jenis Penyakit \t| Biaya \t\t|\n ";
+    cout << "\t=========================================================================" << endl;
+    cout << "\t| 1. Operasi Mata \t| 1. Katarak \t\t| Rp. 7.500.000\t\t|\n";
+    cout << "\t|\t\t\t|=======================|=======================|" << endl;
+    cout << "\t|\t\t\t| 2. Plus / Minus \t| Rp. 5.000.000\t\t|\n";
+    cout << "\t|\t\t\t|=======================|=======================|" << endl;
+    cout << "\t|\t\t\t| 3. Silinder \t\t| Rp. 4.000.000\t\t|\n";
+    cout << "\t|=======================|=======================|=======================|" << endl;
+    cout << "\t| 2. Operasi Jantung \t| 1. Jantung Koroner \t| Rp. 500.000.000\t|\n";
+    cout << "\t|\t\t\t|=======================|=======================|" << endl;
+    cout << "\t|\t\t\t| 2. Katup Jantung \t| Rp. 350.000.000\t|\n";
+    cout << "\t|\t\t\t|=======================|=======================|" << endl;
+    cout << "\t|\t\t\t| 3. Otot Jantung \t| Rp. 450.000.000\t|\n";
+    cout << "\t=========================================================================" << endl;
+    cout << "\n" << endl;
+
+    int pilihan, jenis;
+    cout << "<< MENU MENGHITUNG BIAYA OPERASI >>" << endl;
+    cout << "1. Hitung Biaya Operasi Mata" << endl;
+    cout << "2. Hitung Biaya Operasi Jantung" << endl;
+    cout << "\n";
+    cout << "Masukan Pilihan Anda : ";
+    cin >> pilihan;
+    cout << "\n";
+
+    //intruksi pemilihan bercabang
+    if (pilihan == 1){
+            cout << "JENIS PENYAKIT MATA" << endl;
+            cout << "1. Katarak" << endl;
+            cout << "2. Plus/Minus" << endl;
+            cout << "3. Silinder" << endl;
+            cout << "\n";
+            cout << "Masukkan jenis penyakit mata : ";
+            cin >> jenis;
+
+            /*memilih salah satu kasus
+            jika tidak ada kasus yang tersedia maka
+            program akan menampilkan tidak tersedia*/
+                if (jenis == 1){
+                    cout << "Biaya Operasi Mata Katarak = Rp. 7.500.000" << endl;
+                }else if (jenis == 2){
+                    cout << "Biaya Operasi Mata Plus/Minus = Rp. 5.000.000" << endl;
+                }else if (jenis == 3){
+                    cout << "Biaya Operasi Mata Silinder = Rp. 4.000.000" << endl;
+                }
+                /*program akan berjalan jika inputan diatas tidak ada
+                yang memenuhi*/
+                else{
+                    cout << "Pilihan anda tidak tersedia" << endl;
+                }
+    }else if (pilihan == 2){
+            cout << "JENIS PENYAKIT JANTUNG" << endl;
+            cout << "1. Jantung Koroner" << endl;
+            cout << "2. Katup Jantung" << endl;
+            cout << "3. Otot Jantung" << endl;
+            cout << "\n";
+            cout << "Masukkan jenis penyakit jantung : ";
+            cin >> jenis;
+
+            /*memilih salah satu kasus
+            jika tidak ada kasus yang tersedia maka
+            program akan menampilkan tidak tersedia*/
+                if (jenis == 1){
+                    cout << "Biaya Operasi Jantung Koroner = Rp. 500.000.000" << endl;
+                }else if (jenis == 2){
+                    cout << "Biaya Operasi Katup Jantung = Rp. 350.000.000" << endl;
+                }else if (jenis == 3){
+                    cout << "Biaya Operasi Otot Jantung = Rp. 450.000.000" << endl;
+                }
+                /*program akan berjalan jika inputan diatas tidak ada
+                yang memenuhi*/
+                else {
+                    cout << "Pilihan anda tidak tersedia" << endl;
+                }
+    } else {
+            cout << "Pilihan anda tidak tersedia" << endl;
+    }
+    return 0;
+}
