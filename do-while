@@ -1,0 +1,50 @@
+/*
+    Nama    : Ray Fadly Hadi
+    NIM     : 22343029
+    Kelas   : 1INF2
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string nama, pass, nama2, pass2;
+    char jawab = 'T';
+    int n = 0, kesempatan = 0;
+    cout << "\t\t\t<< \tSign Up \t>>\n";
+    do{
+       cout << "Masukkan Username: ";
+       cin >> nama;
+       cout << "Masukkan Password: ";
+       cin >> pass;
+       cout << "Apakah anda yakin dengan Username dan Password anda? (Y/T): ";
+       cin >> jawab;
+    }while (jawab == 'T');
+    system("cls");
+    cout << "\t\t\t<< \tLogin \t>>\n";
+    do{
+        if (n==1){
+            system("cls");
+            cout << "\t\t\t<< \tLogin \t>>\n";
+            cout << "Username dan Password yang anda masukkan salah\n" << endl;
+        }
+        cout << "Username: ";
+        cin >> nama2;
+        cout << "Password: ";
+        cin >> pass2;
+        n = 1;
+        kesempatan++;
+        if (kesempatan == 4){
+            break;
+        }
+    }while((nama2 != nama) || (pass2 != pass));
+    if(kesempatan<4){
+        system("cls");
+        cout << "\t\t\t Selamat datang, " << nama << "\t" << endl;
+    }else if (kesempatan  == 4){
+        cout << "\nSudah 3 kali percobaan, Akun Anda Terblokir" << endl;
+    }
+    return 0;
+}
