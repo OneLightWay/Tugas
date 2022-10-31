@@ -1,0 +1,36 @@
+/*
+    Nama    : Ray Fadly Hadi
+    NIM     : 22343029
+    Kelas   : 1INF2
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int a, b, n=1, bagi, hasil;
+   cout << "Masukan bilangan ke-1:";
+   cin >> a;
+   cout << "Masukan bilangan ke-2:";
+   cin >> b;
+   //mengedentifikasi bilangan
+   if (a < b) {
+    int temp = a;
+    a = b;
+    b = temp;
+   }
+   if (a <= 0 || b <= 0){
+       cout << "Bilangan yang diinputkan harus bilangan bulat positif";
+   } else {
+       hasil = a;
+       do{
+        hasil = a * n;
+        bagi = hasil % b;
+        n++;
+       }while (bagi > 0);
+   }
+    cout << "KPK : " << hasil;
+    return 0;
+}
